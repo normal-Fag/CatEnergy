@@ -1,0 +1,131 @@
+.comparison {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: $gray-bg;
+
+    &__title {
+        margin-top: 0;
+    }
+
+    &__text {
+        font-family: 'Arial';
+        line-height: 18px;
+        color: $gray-text;
+        margin-bottom: 30px;
+    }
+
+    &__results {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    &__total {
+        position: relative;
+        width: 124px;
+        padding: 15px 0;
+
+        border: 1px solid $gray-border;
+        border-radius: 5px;
+        
+        text-align: center;
+
+        &:nth-child(even) {
+            margin-left: 30px;
+        }
+    }
+
+    &__total-title {
+        font-size: $font-big;
+        text-transform: uppercase;
+    }
+
+    &__total-text {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+
+        padding: 0 15px;
+
+        font-size: $font-small;
+        text-transform: lowercase;
+
+        color: $gray-text;
+        background: $gray-bg;
+    }
+
+    &__spending {
+        margin-bottom: 45px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__cat {
+        position: relative;
+    }
+
+    &__cat-before {
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+
+        img {
+            width: 280px;
+        }
+    }
+
+    &__cat-wrap {
+        width: 0;
+        height: 210px;
+        overflow: hidden;
+                
+        img {
+            display: block;
+            width: 280px;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__range {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+
+    &__range-text {
+        font-size: $font-large;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__input {
+        -webkit-appearance: none;
+        height: 7px;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
+        background-image: linear-gradient($green-accent, $green-accent);
+        background-size: 50% 100%;
+        background-repeat: no-repeat;
+
+        &::-webkit-slider-runnable-track {
+            -webkit-appearance: none;
+            box-shadow: none;
+            border: none;
+            background: transparent;
+        }
+
+        &::-webkit-slider-thumb { // Кружок
+            -webkit-appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: $green-accent;
+            box-shadow: 0 0 2px 0 #555;
+            cursor: pointer;
+        }
+    }
+    
+}

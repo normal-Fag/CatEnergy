@@ -1,0 +1,133 @@
+.card {
+    width: 100%;
+    position: relative;
+    padding: 22px 20px;
+    background: $gray-bg;
+    color: $text-main;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    &__icon {
+        position: relative;
+
+        width: 50px;
+        height: 50px;
+
+        background: $green-accent;
+        border-radius: 50%;
+    }
+
+    &__i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        height: 50px;
+        width: 67px;
+
+        transform: translate(-50%, -57%);
+    }
+
+    &__title {
+        font-size: $font-big;
+        text-transform: uppercase;
+        margin-left: 25px;
+    }
+
+    &__text {
+        margin-bottom: 25px;
+        font-family: 'Arial';
+        line-height: 18px;
+        color: $gray-text;
+    }
+
+    &__line {
+        height: 1px;
+        margin-bottom: 25px;
+        background: $gray-border;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        font-family: $oswald;
+        font-size: $font-large;
+        text-transform: uppercase;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        padding: 80px 53px 60px;
+
+        &__title {
+            margin-left: 0;
+            font-size: $font-title;
+        }
+
+        &__text {
+            max-width: 372px;
+            margin-bottom: 65px;
+            line-height: 24px;
+            font-size: $font-large;
+        }
+
+        &__button {
+            font-size: $font-pre-big;
+        }
+
+        &__line {
+            display: none;
+        }
+
+        &__icon {
+            position: absolute;
+            top: 50%;
+            right: 62px;
+
+            width: 200px;
+            height: 200px;
+            
+            transform: translateY(-50%);
+        }
+
+        &__i {
+            height: 195px;
+            width: 268px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .card {
+        padding: 40px 53px 60px;
+
+        &__header {
+            margin-bottom: 45px;
+        }
+
+        &__icon {
+            position: inherit;
+            width: 100px;
+            height: 100px;
+            transform: translateY(0);
+        }
+
+        &__i {
+            width: 134px;
+            height: 97px;
+        }
+
+        &__title {
+            margin-left: 64px;
+        }
+
+        &__text {
+            margin-bottom: 40px;
+        }
+    }
+}

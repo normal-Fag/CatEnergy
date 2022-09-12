@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b2254737-2757-42fd-891c-b1d5e098aafa&lang=ru_RU"></script>
     <script src="app/app.js"></script>
     <title>Cat Energy</title>
 </head>
 <body>
+    <!-- ------------------------------------------------------------- -->
     <svg style="display: none">
         <symbol id="button-arrow" viewBox="0 0 24.2 11">
             <polygon points="17.6,0 24.2,5.5 17.6,11 17.6,6.6 0,6.6 0,4.4 17.6,4.4 " fill="currentColor"/>
@@ -20,8 +22,19 @@
                 C5.7,3.9,3.9,5.7,3.9,8s1.8,4.1,4.1,4.1s4.1-1.8,4.1-4.1S10.3,3.9,8,3.9L8,3.9z" fill="currentColor"/>
             <circle cx="12.3" cy="3.7" r="0.9" fill="currentColor"/>
         </symbol>
+        <symbol id="ak-icon" viewBox="0 0 500 500">
+            <g transform="matrix(2.29109, 0, 0, 2.289596, -322.809174, -324.959747)" style="">
+                <g>
+                  <path style="paint-order: fill; fill-rule: nonzero; stroke: rgba(0, 0, 0, 0);" d="M 192.137 270.087 L 203.262 252.556 L 205.642 270.064 L 220.327 278.005 L 212.291 216.54 L 173.449 277.999 L 220.334 277.996 L 205.739 269.998 L 191.962 269.992 L 192.137 270.087 Z" fill="currentColor"/>
+                  <path style="fill-rule: nonzero; stroke: rgba(0, 0, 0, 0);" d="M 204.105 201.016 L 228.452 200.94 L 215.919 213.065 L 210.592 213.043 L 162.427 289.067 L 166.538 289.044 L 171.116 281.573 C 171.116 281.573 220.881 281.55 220.857 281.55 C 220.833 281.55 221.75 289.052 221.75 289.052 L 225.865 289.019 C 225.865 289.019 215.892 213.001 215.892 212.958 C 215.892 212.915 228.244 201.118 228.244 201.118 C 228.244 201.118 241.116 301.103 241.116 301.08 C 241.116 301.057 209.589 301.183 209.589 301.183 L 208.5 292.17 L 178.237 292.122 L 172.691 301.129 L 141.087 301.096 L 204.105 201.016 Z" fill="currentColor"/>
+                </g>
+                <g>
+                  <path style="fill-rule: nonzero; stroke: rgba(0, 0, 0, 0);" d="M 268.3 201.01 L 243.246 301.118 L 275.78 301.165 L 283.465 270.153 C 283.465 270.153 296.617 301.228 296.617 301.288 C 296.617 301.348 335.772 301.083 335.772 301.083 L 312.895 289.02 L 308.158 289.022 L 290.722 249.419 L 270.289 268.838 L 265.257 289.07 L 261.34 289.063 L 280.333 213.035 L 284.24 213.023 L 271.777 262.923 L 324.572 213.052 L 329.388 213.024 L 294.199 246.357 L 312.807 289.152 L 335.779 301.093 L 312.162 246.737 L 358.945 201.036 L 319.65 200.988 L 295.051 224.012 C 295.051 224.012 300.788 200.949 300.788 201.007 C 300.788 201.065 269.005 200.995 268.3 201.01 Z" fill="currentColor"/>
+                </g>
+              </g>
+        </symbol>
     </svg>
-
+    <!-- ------------------------------------------------------------- -->
     <header class="header container">
         <a href="#" class="header__logo">
             <picture>
@@ -143,7 +156,9 @@
                             <p class="comparison__achievement-text">Затрачено времени</p>
                         </div>
                     </div>
-                    <p class="comparison__spending">Затраты на питание: 15 000 руб.</p>
+                    <p class="comparison__spending">Затраты на питание: 
+                        <span class="comparison__amount">15 000 руб.</span>
+                    </p>
                 </div>
             </div>
             <div class="comparison__before-after">
@@ -171,12 +186,19 @@
         <section class="contacts">
             <div class="contacts__info container">
                 <h4 class="contacts__invitation">Приграшаем к сотрудничеству дилеров!</h4>
-                <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+                <div class="contacts__address">
+                    <p class="contacts__street">ул. Большая Конюшенная, д. 19/8 </p>
+                    <p class="contacts__city">Санкт-Петербург</p>
+                </div>
             </div>
             <div class="contacts__map" id="map"></div>
         </section>
         <footer class="footer container">
-            <img src="public/images/cat-logo-name-mobile.svg" alt="Cat Energy" class="footer__logo">
+            <div class="footer__logo">
+                <a href="#" class="footer__logo-link">
+                    <img src="public/images/cat-logo-name-mobile.svg" alt="Cat Energy" class="footer__logo-image">
+                </a>
+            </div>
             <div class="footer__social-list">
                 <div class="footer__social-item">
                     <a href="#" class="footer__social-link">
@@ -196,6 +218,16 @@
                     <a href="#" class="footer__social-link">
                         <svg width="16" height="16" class="footer__social-image">
                             <use xlink:href="#insta-icon"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__authorship">
+                <p class="footer__author">ALEXANDR Kuchko</p>
+                <div class="footer__logo--ak">
+                    <a href="#" class="footer__logo-link">
+                        <svg width="34" height="34">
+                            <use xlink:href="#ak-icon"></use>
                         </svg>
                     </a>
                 </div>

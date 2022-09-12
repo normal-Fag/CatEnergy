@@ -710,20 +710,92 @@ body {
   line-height: 20px;
   color: #444444;
 }
+.contacts__map {
+  width: 100%;
+  height: 362px;
+}
+.contacts__map [class*=copyrights-pane] {
+  display: none !important;
+}
 
+@media (min-width: 768px) {
+  .contacts__info {
+    justify-content: space-between;
+    padding-top: 66px;
+    padding-bottom: 63px;
+  }
+  .contacts__invitation {
+    max-width: 152px;
+    margin-left: 40px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .contacts__address {
+    max-width: 155px;
+    margin-right: 40px;
+    font-size: 16px;
+    text-align: right;
+    line-height: 20px;
+  }
+  .contacts__street {
+    margin-bottom: 25px;
+  }
+  .contacts__map {
+    height: 396px;
+  }
+}
+@media (min-width: 1440px) {
+  .contacts {
+    position: relative;
+  }
+  .contacts__info {
+    position: absolute;
+    top: 50%;
+    left: 110px;
+    transform: translateY(-50%);
+    padding: 66px 90px 63px 77px;
+    background: #FFFFFF;
+    z-index: 1;
+  }
+  .contacts__invitation {
+    margin-left: 0;
+  }
+  .contacts__address {
+    margin-right: 0;
+    margin-left: 95px;
+    text-align: left;
+  }
+  .contacts__map {
+    height: 400px;
+  }
+}
 .footer {
   background: #f2f2f2;
   padding-top: 40px;
   padding-bottom: 40px;
 }
 .footer__logo {
-  width: 130px;
+  width: 100%;
   margin-bottom: 30px;
+}
+.footer__logo--ak {
+  margin-bottom: 0;
+}
+.footer__logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666666;
+}
+.footer__logo-image {
+  width: 128px;
+  height: 24px;
 }
 .footer__social-list {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
   padding-top: 25px;
   padding-bottom: 25px;
   border-top: 1px solid #d9d9d9;
@@ -734,4 +806,47 @@ body {
 }
 .footer__social-link {
   color: #666666;
+}
+.footer__authorship {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__author {
+  color: #666666;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+  .footer__logo {
+    width: auto;
+    margin-bottom: 0;
+  }
+  .footer__logo--ak {
+    margin-left: 20px;
+  }
+  .footer__logo-link {
+    display: block;
+  }
+  .footer__social-list {
+    margin-bottom: 0;
+    border: none;
+  }
+  .footer__social-image {
+    width: 23px;
+    height: 23px;
+  }
+}
+@media (min-width: 1440px) {
+  .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }/*# sourceMappingURL=style.css.map */

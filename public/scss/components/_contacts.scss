@@ -19,4 +19,76 @@
         line-height: 20px;
         color: $gray-text;
     }
+
+    &__map {
+        width: 100%;
+        height: 362px;
+
+        [class*="copyrights-pane"] {
+            display: none !important;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .contacts {
+        &__info {
+            justify-content: space-between;
+            padding-top: 66px;
+            padding-bottom: 63px; 
+        }
+
+        &__invitation {
+            max-width: 152px;
+            margin-left: 40px;
+            font-size: $font-l;
+            line-height: 25px;
+        }
+
+        &__address {
+            max-width: 155px;
+            margin-right: 40px;
+            font-size: $font-s;
+            text-align: right;
+            line-height: 20px;
+        }
+
+        &__street {
+            margin-bottom: 25px;
+        }
+
+        &__map {
+            height: 396px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .contacts {
+        position: relative;
+
+        &__info {
+            position: absolute;
+            top: 50%;
+            left: 110px;
+            transform: translateY(-50%);
+            padding: 66px 90px 63px 77px;
+            background: $white;
+            z-index: 1;
+        }
+
+        &__invitation {
+            margin-left: 0;
+        }
+
+        &__address {
+            margin-right: 0;
+            margin-left: 95px;
+            text-align: left;
+        }
+
+        &__map {
+            height: 400px;
+        }
+    }
 }

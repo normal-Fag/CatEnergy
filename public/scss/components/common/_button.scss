@@ -3,13 +3,13 @@
     padding: 15px 30px;
     color: $white;
     font-family: $oswald;
-    font-size: $font-medium;
+    font-size: $font-xs;
     text-transform: uppercase;
     background: $green-accent;
 }
 
 @media (min-width: 768px) {
     .c-button {
-        font-size: $font-pre-big;
+        font-size: $font-l;
     }
 }

@@ -141,6 +141,7 @@ body {
   font-family: "Oswald";
   font-size: 16px;
   text-transform: uppercase;
+  background: transparent;
 }
 
 @media (min-width: 768px) {
@@ -436,6 +437,11 @@ body {
 }
 
 @media (min-width: 768px) {
+  .advantages {
+    border-bottom: 1px solid #f2f2f2;
+    margin-bottom: 0;
+    padding-bottom: 105px;
+  }
   .advantages__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -473,6 +479,9 @@ body {
   }
 }
 @media (min-width: 1440px) {
+  .advantages {
+    border-bottom: none;
+  }
   .advantages__list {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -485,7 +494,7 @@ body {
 }
 .comparison {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   background: #f2f2f2;
 }
 .comparison__title {
@@ -497,13 +506,13 @@ body {
   color: #444444;
   margin-bottom: 30px;
 }
-.comparison__results {
+.comparison__achievements {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 40px;
 }
-.comparison__total {
+.comparison__achievement {
   position: relative;
   width: 124px;
   padding: 15px 0;
@@ -511,14 +520,14 @@ body {
   border-radius: 5px;
   text-align: center;
 }
-.comparison__total:nth-child(even) {
+.comparison__achievement:nth-child(even) {
   margin-left: 30px;
 }
-.comparison__total-title {
+.comparison__achievement-title {
   font-size: 24px;
   text-transform: uppercase;
 }
-.comparison__total-text {
+.comparison__achievement-text {
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -534,28 +543,21 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
-.comparison__cat {
-  position: relative;
-}
-.comparison__cat-before {
-  position: absolute;
-  top: 0;
-  overflow: hidden;
-}
-.comparison__cat-before img {
-  width: 280px;
+.comparison__cats {
+  margin-bottom: 30px;
 }
 .comparison__cat-wrap {
-  width: 0;
-  height: 210px;
-  overflow: hidden;
+  max-width: 320px;
+  margin: auto;
 }
-.comparison__cat-wrap img {
-  display: block;
-  width: 280px;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.comparison__cat-wrap--after {
+  position: relative;
+}
+.comparison__cat-wrap--before {
+  position: absolute;
+  overflow: hidden;
+  width: 50%;
+  background: #f2f2f2;
 }
 .comparison__range {
   display: grid;
@@ -590,4 +592,146 @@ body {
   background: #68b738;
   box-shadow: 0 0 2px 0 #555;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .comparison {
+    padding-top: 50px;
+    padding-bottom: 0;
+    background: none;
+  }
+  .comparison__text {
+    margin-bottom: 55px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .comparison__results {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 85px;
+  }
+  .comparison__spending {
+    margin-left: 170px;
+    margin-bottom: 0;
+    text-align: right;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .comparison__achievements {
+    margin-bottom: 0;
+  }
+  .comparison__achievement {
+    width: 161px;
+    padding: 20px 0;
+  }
+  .comparison__achievement:nth-child(even) {
+    margin-left: 42px;
+  }
+  .comparison__achievement-title {
+    font-size: 30px;
+  }
+  .comparison__achievement-text {
+    padding: 0 10px;
+    font-size: 14px;
+    white-space: nowrap;
+    background: #FFFFFF;
+  }
+  .comparison__before-after {
+    padding-bottom: 70px;
+    background: linear-gradient(to bottom, transparent 26.78%, #f2f2f2 0);
+  }
+  .comparison__cat-wrap {
+    max-width: 690px;
+  }
+  .comparison__cat-wrap--before {
+    background: linear-gradient(to bottom, #FFFFFF 32.75%, #f2f2f2 0);
+  }
+}
+@media (min-width: 1440px) {
+  .comparison {
+    position: relative;
+    padding-bottom: 75px;
+    background: linear-gradient(to bottom, #FFFFFF 28%, #f2f2f2 0);
+  }
+  .comparison__title {
+    margin-bottom: 150px;
+  }
+  .comparison__text {
+    max-width: 450px;
+    margin-bottom: 75px;
+  }
+  .comparison__results {
+    display: block;
+    margin-bottom: 0;
+  }
+  .comparison__achievements {
+    justify-content: flex-start;
+    margin-bottom: 60px;
+  }
+  .comparison__achievement-text {
+    background: #f2f2f2;
+  }
+  .comparison__spending {
+    margin-left: 0;
+    text-align: left;
+  }
+  .comparison__before-after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+  }
+  .comparison__cat-wrap {
+    max-width: 677px;
+  }
+  .comparison__cat-wrap img {
+    width: 677px;
+  }
+  .comparison__cat-wrap--before {
+    background: linear-gradient(to bottom, #FFFFFF 36.3%, #f2f2f2 0);
+  }
+}
+.contacts__info {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.contacts__invitation {
+  flex: 1;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+}
+.contacts__address {
+  flex: 1;
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 20px;
+  color: #444444;
+}
+
+.footer {
+  background: #f2f2f2;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.footer__logo {
+  width: 130px;
+  margin-bottom: 30px;
+}
+.footer__social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+.footer__social-item:not(:first-child) {
+  margin-left: 40px;
+}
+.footer__social-link {
+  color: #666666;
 }/*# sourceMappingURL=style.css.map */

@@ -33,7 +33,7 @@
     }
 
     &__title {
-        font-size: $font-big;
+        font-size: $font-xl;
         text-transform: uppercase;
         margin-left: 25px;
     }
@@ -55,8 +55,9 @@
         display: flex;
         align-items: center;
         font-family: $oswald;
-        font-size: $font-large;
+        font-size: $font-s;
         text-transform: uppercase;
+        background: transparent;
     }
 }
 
@@ -66,18 +67,18 @@
 
         &__title {
             margin-left: 0;
-            font-size: $font-title;
+            font-size: $font-3xl;
         }
 
         &__text {
             max-width: 372px;
             margin-bottom: 65px;
             line-height: 24px;
-            font-size: $font-large;
+            font-size: $font-s;
         }
 
         &__button {
-            font-size: $font-pre-big;
+            font-size: $font-l;
         }
 
         &__line {

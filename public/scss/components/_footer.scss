@@ -1,0 +1,30 @@
+.footer {
+    background: $gray-bg;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &__logo {
+        width: 130px;
+        margin-bottom: 30px;
+    }
+
+    &__social-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        border-top: 1px solid $gray-border;
+        border-bottom: 1px solid $gray-border;
+    }
+
+    &__social-item {
+        &:not(:first-child) {
+            margin-left: 40px;
+        }
+    }
+
+    &__social-link {
+        color: #666666;
+    }
+}

@@ -1,0 +1,22 @@
+.contacts {
+    &__info {
+        display: flex;
+        padding-top: 30px;
+        padding-bottom: 30px; 
+    }
+
+    &__invitation {
+        flex: 1;
+        text-transform: uppercase;
+        font-size: $font-s;
+        line-height: 20px;
+    }
+
+    &__address {
+        flex: 1;
+        font-family: 'Arial';
+        font-size: $font-xs;
+        line-height: 20px;
+        color: $gray-text;
+    }
+}

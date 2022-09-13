@@ -60,12 +60,13 @@
 @media (min-width: 1440px) {
     .first-screen {
         height: 700px;
-        background: url('../images/cat-background-desktop.png') right no-repeat;
+        background: url('../images/cat-background-desktop.png') right top no-repeat;
         margin-bottom: 80px;
     }
 
     .first-screen__content {
         max-width: 450px;
+        margin-top: 175px;
     }
 
     .first-screen__can {

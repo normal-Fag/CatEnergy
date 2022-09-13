@@ -57,7 +57,20 @@
         font-family: $oswald;
         font-size: $font-s;
         text-transform: uppercase;
+        color: $text-main;
         background: transparent;
+    }
+
+    &__button-arrow {
+        width: 24.2px;
+        height: 11px;
+        clip-path: polygon(30% 0%, 30% 40%, 100% 40%, 100% 60%, 30% 60%, 30% 100%, 0% 50%);
+        color: gray;
+        background-image: linear-gradient(90deg, gray, gray);
+    }
+
+    &__btn-arrow {
+        margin-left: 14px;
     }
 }
 
@@ -100,6 +113,10 @@
             height: 195px;
             width: 268px;
         }
+
+        &__btn-arrow {
+            margin-left: 23px;
+        }
     }
 }
 
@@ -129,6 +146,10 @@
 
         &__text {
             margin-bottom: 40px;
+        }
+
+        &__btn-arrow {
+            margin-left: 25px;
         }
     }
 }

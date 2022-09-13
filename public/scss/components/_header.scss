@@ -102,9 +102,7 @@
         position: relative;
         height: 106px;
         font-size: $font-m;
-    }
 
-    .header {
         &__logo {
             min-width: 173px;
             height: 58px;
@@ -113,13 +111,7 @@
         &__title {
             display: none;
         }
-    }
 
-    .header__burger {
-        display: none;
-    }
-
-    .header {
         &__navigation {
             position: relative;
             right: 0;
@@ -134,13 +126,54 @@
         }
 
         &__item {
+            position: relative;
             border-bottom: none;
             padding: 0;
             margin-left: 35px;
 
-            &--active {
-                border-bottom: 2px solid $green-accent;
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                width: 0%;
+                height: 2px;
+                background: $green-accent;
+                transition: width 0.3s ease 0s;
             }
+
+            &--active::before {
+                width: 100%;
+            }
+
+            &:hover::before {
+                width: 100%;
+            }
+        }
+    }
+
+    .header__burger {
+        display: none;
+    }
+}
+
+@media (min-width: 1440px) {
+    .header {
+        position: absolute;
+        top: 0;
+        height: 167px;
+        font-size: $font-l;
+        background: transparent;
+
+        &__navigation {
+            background: transparent;
+        }
+
+        &__item::before {
+            background: $white;
+        }
+
+        &__link {
+            color: $white;
         }
     }
 }

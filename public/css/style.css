@@ -141,7 +141,19 @@ body {
   font-family: "Oswald";
   font-size: 16px;
   text-transform: uppercase;
+  color: #111111;
   background: transparent;
+}
+.card__button-arrow {
+  width: 24.2px;
+  height: 11px;
+  -webkit-clip-path: polygon(30% 0%, 30% 40%, 100% 40%, 100% 60%, 30% 60%, 30% 100%, 0% 50%);
+          clip-path: polygon(30% 0%, 30% 40%, 100% 40%, 100% 60%, 30% 60%, 30% 100%, 0% 50%);
+  color: gray;
+  background-image: linear-gradient(90deg, gray, gray);
+}
+.card__btn-arrow {
+  margin-left: 14px;
 }
 
 @media (min-width: 768px) {
@@ -176,6 +188,9 @@ body {
     height: 195px;
     width: 268px;
   }
+  .card__btn-arrow {
+    margin-left: 23px;
+  }
 }
 @media (min-width: 1440px) {
   .card {
@@ -199,6 +214,9 @@ body {
   }
   .card__text {
     margin-bottom: 40px;
+  }
+  .card__btn-arrow {
+    margin-left: 25px;
   }
 }
 .header {
@@ -293,9 +311,6 @@ body {
   .header__title {
     display: none;
   }
-  .header__burger {
-    display: none;
-  }
   .header__navigation {
     position: relative;
     right: 0;
@@ -308,12 +323,46 @@ body {
     justify-content: end;
   }
   .header__item {
+    position: relative;
     border-bottom: none;
     padding: 0;
     margin-left: 35px;
   }
-  .header__item--active {
-    border-bottom: 2px solid #68b738;
+  .header__item::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 0%;
+    height: 2px;
+    background: #68b738;
+    transition: width 0.3s ease 0s;
+  }
+  .header__item--active::before {
+    width: 100%;
+  }
+  .header__item:hover::before {
+    width: 100%;
+  }
+  .header__burger {
+    display: none;
+  }
+}
+@media (min-width: 1440px) {
+  .header {
+    position: absolute;
+    top: 0;
+    height: 167px;
+    font-size: 20px;
+    background: transparent;
+  }
+  .header__navigation {
+    background: transparent;
+  }
+  .header__item::before {
+    background: #FFFFFF;
+  }
+  .header__link {
+    color: #FFFFFF;
   }
 }
 .first-screen {
@@ -370,11 +419,12 @@ body {
 @media (min-width: 1440px) {
   .first-screen {
     height: 700px;
-    background: url("../images/cat-background-desktop.png") right no-repeat;
+    background: url("../images/cat-background-desktop.png") right top no-repeat;
     margin-bottom: 80px;
   }
   .first-screen__content {
     max-width: 450px;
+    margin-top: 175px;
   }
   .first-screen__can {
     position: absolute;

@@ -6,6 +6,15 @@
     font-size: $font-xs;
     text-transform: uppercase;
     background: $green-accent;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+        background: $green-accent-hover;
+    }
+
+    &:active {
+        color: rgba($color: $white, $alpha: .3);
+    }
 }
 
 @media (min-width: 768px) {

@@ -130,6 +130,7 @@
             border-bottom: none;
             padding: 0;
             margin-left: 35px;
+            transition: opacity 0.2s ease 0s;
 
             &::before {
                 content: '';
@@ -147,6 +148,10 @@
 
             &:hover::before {
                 width: 100%;
+            }
+
+            &:active {
+                opacity: 0.3;
             }
         }
     }

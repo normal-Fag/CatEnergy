@@ -81,11 +81,12 @@ body{
 
 @import '../scss/components/common/button';
 @import '../scss/components/common/card';
+@import '../scss/components/common/range-input';
 
 @import '../scss/components/header';
-@import '../scss/components/first-screen';
-@import '../scss/components/categories';
-@import '../scss/components/advantages';
-@import '../scss/components/comparison';
-@import '../scss/components/contacts';
+@import '../scss/components/1-first-screen';
+@import '../scss/components/2-categories';
+@import '../scss/components/3-advantages';
+@import '../scss/components/4-comparison';
+@import '../scss/components/5-contacts';
 @import '../scss/components/footer';

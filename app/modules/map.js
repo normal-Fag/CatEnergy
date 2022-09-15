@@ -7,7 +7,7 @@ const createMap = () => {
 
     let placemark = new ymaps.Placemark(center, {}, {
         iconLayout: 'default#image',
-        iconImageHref: '../public/images/map-pin.png',
+        iconImageHref: '../../public/images/map-pin.png',
         iconImageSize: [53, 53],
         iconImageOffset: [-15, -40],
     });

@@ -1,0 +1,33 @@
+.field {
+    display: flex;
+    align-items: center;
+
+    &__label {
+        text-transform: uppercase;
+        font-size: $font-s;
+        color: $text-header;
+        white-space: nowrap;
+    }
+
+    &__input {
+        -webkit-appearance: none;
+        width: 100%;
+        margin-left: 15px;
+        padding: 15px;
+        border: 1px solid $input-border;
+        font-family: inherit;
+
+        font-size: $font-s;
+        text-transform: uppercase;
+        color: $gray-text;
+
+        &:hover {
+            border-color: $input-border-hover;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $gray-text;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <script src="app/app.js"></script>
+    <title>Cat Energy</title>
+</head>
+<body>
+    <header class="header container">
+        <a href="#" class="header__logo">
+            <picture>
+                <source media="(min-width: 1440px)" srcset="../public/images/cat-logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="../public/images/cat-logo-tablet.svg">
+                <img src="../public/images/cat-logo-mobile.svg" alt="Cat energy logo">
+            </picture>
+        </a>
+        <img src="../public/images/cat-logo-name-mobile.svg" alt="Cat energy" class="header__title">
+        <div class="header__burger">
+            <span class="header__cotleta"></span>
+            <span class="header__cotleta"></span>
+            <span class="header__cotleta"></span>
+        </div>
+        <nav class="header__navigation">
+            <ul class="header__list">
+                <li class="header__item header__item--active">
+                    <a href="#" class="header__link">Главная</a>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link">Каталог продукции</a>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link">Подбор программы</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <form action="submit" class="form container">
+            <h1 class="form__title title">Подбор программы</h1>
+            <p class="form__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</p>
+            <section class="form__main-info">
+                <fieldset class="form__bio">
+                    <p class="form__field field">
+                        <label for="name" class="field__label">
+                            <span class="field__label-title">Имя:</span>
+                            <abbr title="required" class="field__label-abbreviation">*</abbr>
+                        </label>
+                        <input type="text" id="name" name="cat name" class="field__input" required/>
+                    </p>
+                </fieldset>
+            </section>
+        </form>
+    </main>
+</body>
+</html>

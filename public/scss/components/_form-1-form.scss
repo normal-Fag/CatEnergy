@@ -1,0 +1,10 @@
+.form {
+    &__subtitle {
+        max-width: 230px;
+        margin-bottom: 40px;
+        font-size: $font-xs;
+        text-transform: uppercase;
+        line-height: 18px;
+        color: $text-main;
+    }
+}

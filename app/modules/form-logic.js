@@ -1,0 +1,5 @@
+const validateForm = () => {
+
+}
+
+export { validateForm };

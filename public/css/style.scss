@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 @import '../scss/constants/vars';
 
+@keyframes move {
+	0% { transform: translate(0, 0); }
+	50% { transform: translate(50% 50%); }
+	100% { transform: translate(100%, 50%) ;}
+}
+
+.framekey {
+	&__title {
+		animation: move 0.3s ease 0s;
+	}
+}
+
 *, 
 *::before,
 *::after {
@@ -52,6 +64,7 @@ body{
 .title {
 	margin: 30px 0;
 	font-size: $font-3xl;
+	color: $text-main;
 
 	&--light {
 		color: $white;
@@ -76,17 +89,20 @@ body{
 @media (min-width: 1440px) {
 	.container {
 		padding: 0 110px;
+		max-width: 1440px;
 	}
 }
 
 @import '../scss/components/common/button';
 @import '../scss/components/common/card';
 @import '../scss/components/common/range-input';
+@import '../scss/components/common/field';
 
 @import '../scss/components/header';
-@import '../scss/components/1-first-screen';
-@import '../scss/components/2-categories';
-@import '../scss/components/3-advantages';
-@import '../scss/components/4-comparison';
-@import '../scss/components/5-contacts';
 @import '../scss/components/footer';
+@import '../scss/components/index-1-first-screen';
+@import '../scss/components/index-2-categories';
+@import '../scss/components/index-3-advantages';
+@import '../scss/components/index-4-comparison';
+@import '../scss/components/index-5-contacts';
+@import '../scss/components/form-1-form';

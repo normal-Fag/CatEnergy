@@ -484,6 +484,7 @@ input[type=range]::-ms-thumb {
     position: relative;
     right: 0;
     top: 0;
+    width: auto;
     height: auto;
   }
   .header__list {

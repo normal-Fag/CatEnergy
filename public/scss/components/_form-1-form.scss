@@ -7,12 +7,28 @@
         line-height: 18px;
         color: $text-main;
     }
+}
 
+.form {
     &__bio {
-        
+        padding-bottom: 23px;
     }
 
     &__field:not(:last-child) {
         margin-bottom: 14px;
     }
+
+    &__type {
+        padding: 20px 0;
+        border-top: 1px solid $input-border;
+        border-bottom: 1px solid $input-border;
+    }
+
+    &__radio-field:not(:last-child) {
+        margin-bottom: 12px;
+    }
+}
+
+.form {
+    
 }

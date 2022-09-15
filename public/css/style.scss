@@ -64,10 +64,13 @@ body{
 .title {
 	margin: 30px 0;
 	font-size: $font-3xl;
-	color: $text-main;
 
 	&--light {
 		color: $white;
+	}
+
+	&--dark {
+		color: $text-main;
 	}
 }
 

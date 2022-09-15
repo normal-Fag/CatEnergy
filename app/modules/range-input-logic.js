@@ -1,5 +1,4 @@
 const handleInputChange = (e) => {
-    console.log('Input');
     let target = e.target;
     const min = target.min;
     const max = target.max;

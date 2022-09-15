@@ -1,9 +1,9 @@
 .field {
     display: flex;
     align-items: center;
+    text-transform: uppercase;
 
     &__label {
-        text-transform: uppercase;
         font-size: $font-s;
         color: $text-header;
         white-space: nowrap;
@@ -13,12 +13,12 @@
         -webkit-appearance: none;
         width: 100%;
         margin-left: 15px;
-        padding: 15px;
+        padding: 12.5px 15px;
         border: 1px solid $input-border;
         font-family: inherit;
-
         font-size: $font-s;
-        text-transform: uppercase;
+        text-transform: inherit;
+        line-height: 18px;
         color: $gray-text;
 
         &:hover {
@@ -28,6 +28,10 @@
         &:focus {
             outline: none;
             border-color: $gray-text;
+        }
+
+        &--incorrect {
+            border-color: $error !important;
         }
     }
 }

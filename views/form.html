@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../public/css/style.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=b2254737-2757-42fd-891c-b1d5e098aafa&lang=ru_RU"></script>
     <script type="module" src="../app/app.js"></script>
+    <script type="module" src="../app/form-page.js"></script>
     <title>Cat Energy</title>
 </head>
 <body>
@@ -56,49 +57,81 @@
     </header>
     <main class="main-content">
         <form action="submit" class="form container">
-            <h1 class="form__title title">Подбор программы</h1>
-            <p class="form__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</p>
-            <section class="form__main-info">
-                <fieldset class="form__bio">
-                    <p class="form__field field">
-                        <label for="name" class="field__label">
-                            <span class="field__label-title">Имя:</span>
-                            <abbr title="required" class="field__label-abbreviation">*</abbr>
+            <div class="form__header">
+                <h1 class="form__title title">Подбор программы</h1>
+                <p class="form__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</p>
+            </div>
+            <fieldset class="form__bio">
+                <legend class="form__legend legend--hidden">Данные кота</legend>
+                <ul class="form__list">
+                    <li class="form__list-item">
+                        <div class="form__field field">
+                            <label for="name" class="field__label">Имя:
+                                <abbr title="required" class="field__label-abbreviation">*</abbr>
+                            </label>
+                            <input type="text" id="name" name="cat name" class="field__input field__input--text" required/>
+                        </div>
+                    </li>
+                    <li class="form__list-item">
+                        <div class="form__field field">
+                            <label for="weight" class="field__label">Вес (кг):
+                                <abbr title="required" class="field__label-abbreviation">*</abbr>
+                            </label>
+                            <input type="tel" id="weight" name="cat name" class="field__input field__input--numbers" required/>
+                        </div>
+                    </li>
+                    <li class="form__list-item">
+                        <div class="form__field field">
+                            <label for="age" class="field__label">Возраст (лет):</label>
+                            <input type="tel" id="age" name="cat name" class="field__input field__input--numbers"/>
+                        </div>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="form__type">
+                <legend class="form__legend legend--hidden">Данные кота</legend>
+                <ul class="form__list">
+                    <li class="form__list-item">
+                        <label class="form__radio-field radio">Похудение
+                            <input type="radio" name="type" id="slim" class="radio__input">
+                            <span class="radio__checkmark"></span>
                         </label>
-                        <input type="text" id="name" name="cat name" class="field__input" required/>
-                    </p>
-                    <p class="form__field field">
-                        <label for="name" class="field__label">
-                            <span class="field__label-title">Вес (кг):</span>
-                            <abbr title="required" class="field__label-abbreviation">*</abbr>
+                    </li>
+                    <li class="form__list-item">
+                        <label class="form__radio-field radio">Набор массы
+                            <input type="radio" name="type" id="mass" class="radio__input">
+                            <span class="radio__checkmark"></span>
                         </label>
-                        <input type="text" id="weight" name="cat name" class="field__input" required/>
-                    </p>
-                    <p class="form__field field">
-                        <label for="name" class="field__label">
-                            <span class="field__label-title">Возраст (лет):</span>
+                    </li>
+                    <li class="form__list-item">
+                        <label class="form__radio-field radio">не знаю (нужен ваш совет)
+                            <input type="radio" name="type" id="help" class="radio__input">
+                            <span class="radio__checkmark"></span>
                         </label>
-                        <input type="number" id="age" name="cat name" class="field__input"/>
-                    </p>
-                </fieldset>
-                <fieldset class="form__type">
-                    <label class="form__radio-field radio">Похудение
-                        <input type="radio" name="type" id="slim" class="radio__input">
-                        <span class="radio__checkmark"></span>
-                    </label>
-                    <label class="form__radio-field radio">Набор массы
-                        <input type="radio" name="type" id="mass" class="radio__input">
-                        <span class="radio__checkmark"></span>
-                    </label>
-                    <label class="form__radio-field radio">не знаю (нужен ваш совет)
-                        <input type="radio" name="type" id="help" class="radio__input">
-                        <span class="radio__checkmark"></span>
-                    </label>
-                </fieldset>
-            </section>
-            <section class="form__contacts">
-                
-            </section>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="form__contacts">
+                <legend class="form__legend legend">Контактные данные (владельца кота)</legend>
+                <ul class="form__list">
+                    <li class="form__list-item">
+                        <div class="form__field field">
+                            <label for="mail" class="field__label">E-mail:
+                                <abbr title="required" class="field__label-abbreviation">*</abbr>
+                            </label>
+                            <input type="email" id="mail" name="e-mail" class="field__input field__input--email" required/>
+                        </div>
+                    </li>
+                    <li class="form__list-item">
+                        <div class="form__field field">
+                            <label for="phone" class="field__label">Телефон:
+                                <abbr title="required" class="field__label-abbreviation">*</abbr>
+                            </label>
+                            <input type="tel" id="phone" name="phone-number" class="field__input field__input--phone" required/>
+                        </div>
+                    </li>
+                </ul>
+            </fieldset>
         </form>
         <section class="contacts">
             <div class="contacts__info container">

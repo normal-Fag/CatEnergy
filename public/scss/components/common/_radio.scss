@@ -57,3 +57,24 @@
         height: 12px;
     }
 }
+
+@media (min-width: $tablet) {
+    .radio {
+        height: 40px;
+        padding-left: 88px;
+        font-size: $font-l;
+
+        &__checkmark {
+            left: 28px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .radio__input:checked {
+        & ~ .radio__checkmark::after {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}

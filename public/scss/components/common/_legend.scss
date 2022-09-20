@@ -1,0 +1,45 @@
+.legend {
+    max-width: 182px;
+    position: relative;
+    display: inline-block;
+    font-size: $font-xl;  
+    overflow: visible;
+
+    &--hidden {
+        display: none;
+    }
+
+    @media (min-width: $tablet) {
+        max-width: none;
+        font-size: $font-3xl;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+    }
+
+    &::before {
+        z-index: -1;
+        top: 50%;
+        left: -20px;
+        right: -20px;
+        transform: translateY(-50%);
+        height: 1.333em;
+        background-color: $white;
+    }
+
+    &::after {
+        z-index: -2;
+        top: 0.6em;
+        left: calc($container-padding-mobile * -1);
+        width: 100vw;
+        height: 3px;
+        background-color: $green-accent;
+
+        @media (min-width: $tablet) {
+            left: calc(($container-padding-tablet * -1) - 40px);
+        }
+    }
+}

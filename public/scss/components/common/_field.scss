@@ -2,11 +2,15 @@
     display: flex;
     align-items: center;
     text-transform: uppercase;
+    font-size: $font-s;
 
     &__label {
-        font-size: $font-s;
         color: $text-header;
         white-space: nowrap;
+    }
+
+    &__label-abbreviation {
+        text-decoration: none;
     }
 
     &__input {
@@ -32,6 +36,18 @@
 
         &--incorrect {
             border-color: $error !important;
+        }
+    }
+}
+
+@media (min-width: $tablet) {
+    .field {
+        font-size: $font-l;
+
+        &__input {
+            padding: 13px 19px;
+            font-size: $font-l;
+            line-height: 24px;
         }
     }
 }

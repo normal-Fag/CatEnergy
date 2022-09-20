@@ -1,4 +1,14 @@
 .form {
+    overflow: hidden;
+
+    @media (min-width: $tablet) {
+        padding: 0 70px;
+
+        &__title {
+            margin-left: -30px;
+        }
+    }
+
     &__subtitle {
         max-width: 230px;
         margin-bottom: 40px;
@@ -6,29 +16,52 @@
         text-transform: uppercase;
         line-height: 18px;
         color: $text-main;
+
+        @media (min-width: $tablet) {
+            max-width: 55%;
+            font-size: $font-l;
+            line-height: 30px;
+            margin-bottom: 70px;
+        }
+    }
+
+    &__legend {
+        margin-bottom: 35px;
+
+        @media (min-width: $tablet) {
+            margin-bottom: 75px;
+        } 
     }
 }
 
 .form {
     &__bio {
         padding-bottom: 23px;
+
+        @media (min-width: $tablet) {
+            padding-bottom: 72px;
+        }
     }
 
-    &__field:not(:last-child) {
+    &__list-item:not(:last-child) {
         margin-bottom: 14px;
     }
 
     &__type {
         padding: 20px 0;
+        margin-bottom: 30px;
         border-top: 1px solid $input-border;
         border-bottom: 1px solid $input-border;
-    }
 
-    &__radio-field:not(:last-child) {
-        margin-bottom: 12px;
+        @media (min-width: $tablet) {
+            margin-bottom: 80px;
+            border: 1px solid $input-border;
+        }
     }
 }
 
 .form {
-    
+    &__contacts {
+       
+    }
 }

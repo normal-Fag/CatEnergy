@@ -54,7 +54,7 @@ body{
 
 .container {
     width: auto;
-    padding: 0 20px;
+    padding: 0 $container-padding-mobile;
 }
 
 .main-content {
@@ -76,7 +76,7 @@ body{
 
 @media (min-width: 768px) {
 	.container {
-		padding: 0 30px;
+		padding: 0 $container-padding-tablet;
 	}
 
 	.main-content {
@@ -91,7 +91,7 @@ body{
 
 @media (min-width: 1440px) {
 	.container {
-		padding: 0 110px;
+		padding: 0 $container-padding-desktop;
 		max-width: 1440px;
 	}
 }
@@ -101,6 +101,7 @@ body{
 @import '../scss/components/common/range-input';
 @import '../scss/components/common/field';
 @import '../scss/components/common/radio';
+@import '../scss/components/common/legend';
 
 @import '../scss/components/header';
 @import '../scss/components/footer';

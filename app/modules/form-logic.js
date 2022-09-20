@@ -1,18 +1,23 @@
 const validateTextField = (event) => {
-    let field = event.target;
-    let value = field.value;
+    let value = event.target.value;
 
     if (!value)
-        field.classList.add('field__input--incorrect');
+        event.target.classList.add('field__input--incorrect');
     else 
-        field.classList.remove('field__input--incorrect');
+        event.target.classList.remove('field__input--incorrect');
+}
+
+const checkNumber = (number) => {
+    return +number > 50 ? number.substring(0, number.length - 1) : number;
 }
 
 const validateNumberField  = (event) => {
     let input = event.target;
     let numbersValue = input.value.replace(/\D/g, '');
 
-    if (!input.value)
+    numbersValue = checkNumber(numbersValue);
+
+    if (!numbersValue)
         input.classList.add('field__input--incorrect');
     else 
         input.classList.remove('field__input--incorrect');
@@ -20,4 +25,8 @@ const validateNumberField  = (event) => {
     input.value = numbersValue;
 }
 
-export { validateTextField, validateNumberField };
+const filterKeyDownOnNumberInput = (event) => {
+    return event.keyCode !== 69 && event.keyCode !== 189 && event.keyCode !== 187
+}
+
+export { validateTextField, validateNumberField, filterKeyDownOnNumberInput };

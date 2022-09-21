@@ -30,6 +30,12 @@
     }
 }
 
+.contacts--form-page {
+    .contacts__info {
+        background: $gray-bg;
+    }
+}
+
 @media (min-width: 768px) {
     .contacts {
         &__info {
@@ -70,7 +76,7 @@
         &__info {
             position: absolute;
             top: 50%;
-            left: 110px;
+            left: calc((100vw - 1440px)/2 + 110px);
             transform: translateY(-50%);
             padding: 66px 90px 63px 77px;
             background: $white;
@@ -89,6 +95,12 @@
 
         &__map {
             height: 400px;
+        }
+    }
+
+    .contacts--form-page {
+        .contacts__info {
+            background: $white;
         }
     }
 }

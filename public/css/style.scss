@@ -93,6 +93,7 @@ body{
 	.container {
 		padding: 0 $container-padding-desktop;
 		max-width: 1440px;
+		margin: auto
 	}
 }
 
@@ -102,6 +103,7 @@ body{
 @import '../scss/components/common/field';
 @import '../scss/components/common/radio';
 @import '../scss/components/common/legend';
+@import '../scss/components/common/checkbox';
 
 @import '../scss/components/header';
 @import '../scss/components/footer';
@@ -109,5 +111,5 @@ body{
 @import '../scss/components/index-2-categories';
 @import '../scss/components/index-3-advantages';
 @import '../scss/components/index-4-comparison';
-@import '../scss/components/index-5-contacts';
+@import '../scss/components/contacts';
 @import '../scss/components/form-1-form';

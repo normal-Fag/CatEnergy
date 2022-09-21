@@ -1,7 +1,9 @@
 .footer {
-    background: $gray-bg;
     padding-top: 40px;
     padding-bottom: 40px;
+    background: $gray-bg;
+    box-shadow: 0 0 0 100vmax $gray-bg;
+    clip-path: inset(0 -100vmax);
 
     &__logo {
         width: 100%;

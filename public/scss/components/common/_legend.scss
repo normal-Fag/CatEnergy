@@ -41,5 +41,9 @@
         @media (min-width: $tablet) {
             left: calc(($container-padding-tablet * -1) - 40px);
         }
+
+        @media (min-width: $desktop) {
+            left: calc($container-padding-desktop * -1);
+        }
     }
 }

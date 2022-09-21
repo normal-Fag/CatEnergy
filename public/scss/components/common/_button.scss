@@ -1,6 +1,6 @@
 .c-button {
     min-width: 245px;
-    padding: 15px 30px;
+    height: 40px;
     color: $white;
     font-family: $oswald;
     font-size: $font-xs;
@@ -19,6 +19,7 @@
 
 @media (min-width: 768px) {
     .c-button {
+        height: 52px;
         font-size: $font-l;
     }
 }

@@ -15,10 +15,12 @@
 
     &__input {
         -webkit-appearance: none;
+        position: relative;
         width: 100%;
         margin-left: 15px;
         padding: 12.5px 15px;
         border: 1px solid $input-border;
+        border-radius: 0;
         font-family: inherit;
         font-size: $font-s;
         text-transform: inherit;
@@ -37,6 +39,19 @@
         &--incorrect {
             border-color: $error !important;
         }
+
+        &--email {
+            background: url('/public/images/mail.svg') no-repeat;
+            background-position: right 15px bottom 50%;
+            background-size: 17px 13px;
+        }
+
+        &--phone {
+            background: url('/public/images/phone.svg') no-repeat;
+            background-position: right 12px bottom 50%;
+            background-size: 20px 20px;
+        }
+        
     }
 }
 

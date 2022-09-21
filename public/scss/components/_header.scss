@@ -1,9 +1,6 @@
 .header {
     position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    width: 100vw;
     height: 70px;
     border-bottom: 1px solid $gray-border;
     font-size: $font-s;
@@ -11,6 +8,13 @@
     line-height: $line-height-standart;
     background: $white;
     z-index: 10;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
 }
 
 .header {
@@ -47,6 +51,8 @@
     }
 
     &__link {
+        display: inline-block;
+        width: 100%;
         color: $text-header;
     }
 }
@@ -182,6 +188,18 @@
 
         &__link {
             color: $white;
+        }
+    }
+
+    .header--form-page {
+        position: relative;
+
+        .header__link {
+            color: $text-header;
+        }
+
+        .header__item::before {
+            background: $green-accent;
         }
     }
 }

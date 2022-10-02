@@ -1,12 +1,10 @@
 .first-screen {
-    padding-top: 30px;
     margin-bottom: 22px;
-    color: $white;
+    padding-top: 30px;
     text-align: center;
+    color: $white;
     background: url('../images/cat-background-mobile.png') top/100% auto no-repeat;
-}
 
-.first-screen {
     &__title {
         margin-top: 0;
     }
@@ -29,7 +27,6 @@
     .first-screen {
         position: relative;
         color: $text-main;
-        margin-left: 90px;
         margin-bottom: 420px;
         text-align: left;
         background: none;
@@ -37,6 +34,7 @@
 
     .first-screen__content {
         max-width: 427px;
+        margin-left: 90px;
     }
 
     .first-screen__can {
@@ -66,7 +64,7 @@
 
     .first-screen__content {
         max-width: 450px;
-        margin-top: 175px;
+        margin: 175px 0 0 80px;
     }
 
     .first-screen__can {

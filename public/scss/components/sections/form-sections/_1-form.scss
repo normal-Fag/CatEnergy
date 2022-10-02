@@ -10,10 +10,6 @@
         color: $text-main;
     }
 
-    &__legend {
-        margin-bottom: 35px;
-    }
-
     &__list-item:not(:last-child) {
         margin-bottom: 14px;
     }
@@ -70,11 +66,7 @@
         &__section {
             padding-bottom: 70px;
         }
-
-        &__legend {
-            margin-bottom: 75px;
-        }
-
+        
         &__list-item:not(:last-child) {
             margin-bottom: 20px;
         }

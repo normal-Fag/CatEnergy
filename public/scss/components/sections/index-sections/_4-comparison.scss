@@ -1,6 +1,5 @@
 .comparison {
-    padding-top: 30px;
-    padding-bottom: 40px;
+    padding: 30px 0 40px 0;
     background: $gray-bg;
 
     &__title {
@@ -10,8 +9,8 @@
     &__text {
         margin-bottom: 30px;
         font-family: 'Arial';
-        color: $gray-text;
         line-height: 18px;
+        color: $gray-text;
     }
 
     &__achievements {
@@ -85,14 +84,13 @@
     &__range {
         display: flex;
         align-items: center;
-        margin: 0 40px;
+        padding: 0 60px;
     }
 
     &__range-text {
-        position: relative;
         font-size: $font-s;
-        text-transform: uppercase;
         text-align: center;
+        text-transform: uppercase;
         line-height: 20px;
         transition: border 0.3s ease 0s;
     }
@@ -108,8 +106,7 @@
 
 @media (min-width: 768px) {
     .comparison {
-        padding-top: 50px;
-        padding-bottom: 0;
+        padding: 50px 0 0;
         background: none;
 
         &__text  {
@@ -170,6 +167,11 @@
             }
         }
 
+        &__range {
+            padding: 0 95px;
+            margin: auto;
+        }
+
         &__range-text {
             border-bottom: 1px dashed #bebebe;
         }
@@ -216,7 +218,7 @@
 
         &__before-after {
             position: absolute;
-            top: 0;
+            bottom: 0;
             right: calc((100vw - 1440px) / 2 + 110px);
             background: none;
         }
@@ -229,7 +231,7 @@
             }
 
             &--before {
-                background: linear-gradient(to bottom, $white 36.3%, $gray-bg 0);
+                background: linear-gradient(to bottom, $white 30.5%, $gray-bg 0);
             }
         }
 

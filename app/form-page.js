@@ -1,16 +1,22 @@
-import { validateTextField, validateNumberField, filterKeyDownOnNumberInput } from './modules/form-logic.js';
+import * as formMethods from './modules/form-logic.js';
 
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
-
-    let textInputs = document.querySelectorAll('.field__input--text');
-    for (let input of textInputs) {
-        input.addEventListener('input', validateTextField);
+    let requiredField = document.querySelectorAll('input[required]');
+    for (let input of requiredField) {
+        console.log(input);
+        input.addEventListener('input', formMethods.validateRequiredField);
     }
 
-    let numberInputs = document.querySelectorAll('.field__input--numbers');
+    let numberInputs = document.querySelectorAll('input[type="number"]');
     for (let input of numberInputs) {
-        input.addEventListener('input', validateNumberField);
+        input.addEventListener('input', formMethods.onNumberInput);
+    }
+
+    let phoneInputs = document.querySelectorAll('input[type="tel"]');
+    for (let input of phoneInputs) {
+        input.addEventListener('input', formMethods.onPhoneInput);
+        input.addEventListener('keydown', formMethods.onPhoneKeyDown);
     }
 }

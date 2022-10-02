@@ -1,5 +1,6 @@
 .field {
     display: flex;
+    position: relative;
     align-items: center;
     text-transform: uppercase;
     font-size: $font-s;
@@ -38,20 +39,25 @@
 
         &--incorrect {
             border-color: $error !important;
-        }
 
-        &--email {
-            background: url('/public/images/mail.svg') no-repeat;
-            background-position: right 15px bottom 50%;
-            background-size: 17px 13px;
+            & ~ .field__icon {
+                color: $error;
+            }
+        }
+    }
+  
+    &__icon {
+        display: flex;
+        position: absolute;
+        color: $text-header;
+
+        &--mail {
+            right: 15px;
         }
 
         &--phone {
-            background: url('/public/images/phone.svg') no-repeat;
-            background-position: right 12px bottom 50%;
-            background-size: 20px 20px;
+            right: 12px;
         }
-        
     }
 }
 

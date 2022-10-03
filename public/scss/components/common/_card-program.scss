@@ -33,7 +33,7 @@
             width: 35px;
             height: 49px;
             transform: scaleX(-1);
-            background: url('/public/images/icons/cat-icon-slim.svg') no-repeat;
+            background: url('CatEnergy/public/images/icons/cat-icon-slim.svg') no-repeat;
         }
 
         &--fat::after {
@@ -41,7 +41,7 @@
             left: -9px;
             width: 67px;
             height: 28px;
-            background: url('/public/images/icons/cat-icon-fat.svg') no-repeat;
+            background: url('CatEnergy/public/images/icons/cat-icon-fat.svg') no-repeat;
         }
     }
 

@@ -44,6 +44,14 @@
                 color: $error;
             }
         }
+
+        &--correct {
+            border-color: $green-accent;
+
+            & ~ .field__icon {
+                color: $green-accent;
+            }
+        }
     }
   
     &__icon {

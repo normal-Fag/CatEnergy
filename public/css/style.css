@@ -430,6 +430,12 @@ input[type=range]::-ms-thumb {
 .field__input--incorrect ~ .field__icon {
   color: #FF8282;
 }
+.field__input--correct {
+  border-color: #68B738;
+}
+.field__input--correct ~ .field__icon {
+  color: #68B738;
+}
 .field__icon {
   display: flex;
   position: absolute;

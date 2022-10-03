@@ -1,3 +1,5 @@
+const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
 const getInputNumbersValue = (input) => {
     return input.value.replace(/\D/g, '');
 }
@@ -10,12 +12,20 @@ const validateRequiredField = (event) => {
     let input = event.target
     let value = input.value;
 
-    console.log(input, value);
+    if (input.type === 'email') 
+        validateEmailField(input);
 
     if (!value)
         input.classList.add('field__input--incorrect');
     else 
         input.classList.remove('field__input--incorrect');
+}
+
+const validateEmailField = (input) => {
+    if (EMAIL_REGEXP.test(input.value)) 
+        input.classList.add('field__input--correct');
+    else 
+        input.classList.remove('field__input--correct');
 }
 
 const onNumberInput  = (event) => {
@@ -65,6 +75,8 @@ const onPhoneInput = (e) => {
 
     input.value = formattedInputValue;
     if (currentSelectionStart) input.setSelectionRange(currentSelectionStart, currentSelectionStart) 
+
+    if (inputNumbersValue.length === 11) input.classList.add('field__input--correct')
 }
 
 const onPhoneKeyDown = (e) => {

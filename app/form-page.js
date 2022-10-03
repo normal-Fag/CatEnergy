@@ -5,7 +5,6 @@ window.addEventListener('DOMContentLoaded', init);
 function init() {
     let requiredField = document.querySelectorAll('input[required]');
     for (let input of requiredField) {
-        console.log(input);
         input.addEventListener('input', formMethods.validateRequiredField);
     }
 

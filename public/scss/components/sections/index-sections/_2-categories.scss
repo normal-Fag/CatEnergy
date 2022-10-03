@@ -17,9 +17,7 @@
 
     .categories__list {
         display: flex;
-    }
-
-    .categories__item:last-child {
-        margin-left: 80px;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 }

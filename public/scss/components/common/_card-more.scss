@@ -20,9 +20,9 @@
     }
 
     &__title {
-        text-transform: uppercase;
-        font-size: $font-s;
         margin-bottom: 12px;
+        font-size: $font-s;
+        text-transform: uppercase;
         color: $text-main;
     }
 
@@ -38,9 +38,9 @@
         padding: 54px 36px 39px;
 
         &__plus-icon {
-            margin-bottom: 47px;
-            height: 60px;
             width: 60px;
+            height: 60px;
+            margin-bottom: 47px;
         }
 
         &__text {
@@ -60,9 +60,9 @@
         }
 
         &__button {
+            min-width: auto;
             height: 40px;
             font-size: $font-s;
-            min-width: auto;
         }
     }
 }

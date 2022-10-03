@@ -2,8 +2,8 @@
     display: flex;
     position: relative;
     align-items: center;
-    text-transform: uppercase;
     font-size: $font-s;
+    text-transform: uppercase;
 
     &__label {
         color: $text-header;

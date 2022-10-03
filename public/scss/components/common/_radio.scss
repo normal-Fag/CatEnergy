@@ -1,9 +1,9 @@
 .radio {
+    position: relative;
     display: flex;
     align-items: center;
-    position: relative;
-    padding-left: 45px;
     height: 30px;
+    padding-left: 45px;
     font-size: $font-s;
     text-transform: uppercase;
     color: $text-header;

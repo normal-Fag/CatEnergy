@@ -20,7 +20,10 @@
 }
 
 .first-screen__button {
+    display: block;
     width: 100%;
+    padding: 11px 10px;
+    line-height: 18px;
 }
 
 @media (min-width: 768px) {
@@ -51,7 +54,8 @@
     }
 
     .first-screen__button {
-        width: auto;
+        padding: 16px 27px;
+        max-width: 245px;
     }
 }
 

@@ -1,10 +1,10 @@
 .line-title {
-    max-width: 182px;
     position: relative;
     display: inline-block;
+    overflow: visible;
+    max-width: 182px;
     margin: 30px 0 35px;
     font-size: $font-xl;  
-    overflow: visible;
 
     &--hidden {
         display: none;
@@ -12,8 +12,8 @@
 
     @media (min-width: $tablet) {
         max-width: none;
-        font-size: $font-3xl;
         margin: 70px 0 75px;
+        font-size: $font-3xl;
     }
 
     &::before,

@@ -1,5 +1,6 @@
 .additional-products {
     overflow: hidden;
+
     &__title {
         max-width: none;
     }
@@ -14,12 +15,12 @@
 
     &__gift-block {
         padding: 65px 0 45px;
-        color: $white;
-        text-align: center;
-        font-size: $font-s;
         font-family: 'Arial';
+        font-size: $font-s;
+        text-align: center;
         line-height: 20px;
-        background: url('../images/gift-photo-mobile.jpg') center/cover no-repeat;
+        color: $white;
+        background: url('../images/gift-bg/gift-photo-mobile.jpg') center/cover no-repeat;
     }
 
     &__gift-icon {
@@ -51,7 +52,7 @@
             justify-content: space-between;
             padding: 65px 125px 75px 90px;
             text-align: left;
-            background: url('../images/gift-photo-tablet.jpg') center/cover no-repeat;
+            background: url('../images/gift-bg/gift-photo-tablet.jpg') center/cover no-repeat;
         }
 
         &__gift-icon {
@@ -87,7 +88,7 @@
             height: auto;
             padding: 65px 42px 40px;
             text-align: center;
-            background: url('../images/gift-photo-desktop.jpg') center/cover no-repeat;
+            background: url('../images/gift-bg/gift-photo-desktop.jpg') center/cover no-repeat;
         }
 
         &__gift-icon {

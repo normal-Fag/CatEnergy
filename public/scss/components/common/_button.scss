@@ -1,10 +1,10 @@
-.c-button {
+.button {
     min-width: 245px;
     height: 40px;
-    color: $white;
     font-family: $oswald;
     font-size: $font-xs;
     text-transform: uppercase;
+    color: $white;
     background: $green-accent;
     transition: all 0.2s ease 0s;
 
@@ -17,7 +17,7 @@
     }
 }
 
-.c-button--gray {
+.button--gray {
     background: $gray-bg;
     color: $text-main;
 
@@ -31,7 +31,7 @@
 }
 
 @media (min-width: 768px) {
-    .c-button {
+    .button {
         height: 52px;
         font-size: $font-l;
     }

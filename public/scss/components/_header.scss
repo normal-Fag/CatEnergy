@@ -83,6 +83,10 @@
 }
 
 .header--active {
+    & ~ body {
+        overflow: hidden;
+    }
+
     .header__cotleta {
         &:nth-of-type(1) {
             top: 50%;

@@ -1199,7 +1199,7 @@ input[type=range]::-ms-thumb {
   padding-top: 30px;
   text-align: center;
   color: #FFFFFF;
-  background: url("../images/cat-background-mobile.png") top/100% auto no-repeat;
+  background: url("../images/index-background-mobile.jpg") top/100% auto no-repeat;
 }
 .first-screen__title {
   margin-top: 0;
@@ -1251,7 +1251,7 @@ input[type=range]::-ms-thumb {
 @media (min-width: 1440px) {
   .first-screen {
     height: 700px;
-    background: url("../images/cat-background-desktop.png") right top no-repeat;
+    background: url("../images/index-background-desktop.jpg") right top no-repeat;
     margin-bottom: 80px;
   }
   .first-screen__content {

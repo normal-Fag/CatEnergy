@@ -33,7 +33,7 @@
             width: 35px;
             height: 49px;
             transform: scaleX(-1);
-            background: url('../../CatEnergy/public/images/icons/cat-icon-slim.svg') no-repeat;
+            background: url('../../public/images/icons/cat-icon-slim.svg') no-repeat;
         }
 
         &--fat::after {
@@ -41,7 +41,7 @@
             left: -9px;
             width: 67px;
             height: 28px;
-            background: url('../../CatEnergy/public/images/icons/cat-icon-fat.svg') no-repeat;
+            background: url('../../public/images/icons/cat-icon-fat.svg') no-repeat;
         }
     }
 
@@ -76,14 +76,14 @@
             transform: translate(0, -50%);
             width: 24.2px;
             height: 11px;
-            background: url('CatEnergy/public/images/icons/arrow-icon.svg') center / contain  no-repeat ;
+            background: url('../../public/images/icons/arrow-icon.svg') center / contain  no-repeat ;
             transition: all 0.1s ease 0s;
         }
 
         &:hover::after {
             right: -9.5px;
             width: 33px;
-            background: url('CatEnergy/public/images/icons/arrow-icon-hover.svg') center / contain  no-repeat ;
+            background: url('../../public/images/icons/arrow-icon-hover.svg') center / contain  no-repeat ;
         }
 
         &:active {

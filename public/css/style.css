@@ -189,13 +189,13 @@ body {
   transform: translate(0, -50%);
   width: 24.2px;
   height: 11px;
-  background: url("/public/images/icons/arrow-icon.svg") center/contain no-repeat;
+  background: url("CatEnergy/public/images/icons/arrow-icon.svg") center/contain no-repeat;
   transition: all 0.1s ease 0s;
 }
 .program-card__link:hover::after {
   right: -9.5px;
   width: 33px;
-  background: url("/public/images/icons/arrow-icon-hover.svg") center/contain no-repeat;
+  background: url("CatEnergy/public/images/icons/arrow-icon-hover.svg") center/contain no-repeat;
 }
 .program-card__link:active {
   opacity: 0.5;
